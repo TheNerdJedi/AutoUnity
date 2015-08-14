@@ -1,19 +1,20 @@
 <?
 
-//This gets the data for the version from the unity and puts it in $ver
+// Gets data for the version from Unity and sets it as $ver
 $ver = $_POST['version'];
-//This gets the data for the security code from the unity and puts it in $hash
+// Gets the data for the security code from Unity and sets it as $hash
 $hash = $_POST['hash'];
 
-//this checks if the $hash is equal to abcd , if not this stops the script
+
+//this checks if the $hash is the same, if not this stops the script
 if ($hash == "abcd")
+// if it is equal then it checks for the version
 {
-	//if it does equal to abcd then it checks
-	//if the $ver equals to 0.0.1 , if so then returns to unity up-to-date
-	//if not then it returns Update Needed to unity
-	
+	// if the $ver is equal to current then returns to Unity "up-to-date"
 	if ($ver == "0.0.1")
 		echo "up-to-date";
+	
+	// if not then returns "Update Needed" to Unity
 	else
 		echo "Update Needed";
 }
