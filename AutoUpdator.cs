@@ -33,6 +33,8 @@ public class AutoUpdator : MonoBehaviour {
     private WebClient wb = new WebClient();//This is used to download and upload files
     private int downloadedPercent = 0;
 
+
+
 	void Start ()// This is run at the start
     {
         //if the updateOnStart is true then run CheckUpdates()
@@ -76,7 +78,7 @@ public class AutoUpdator : MonoBehaviour {
         // check for errors
         if (www.error == null)
         {
-            //if there are no errors then pring WWW Ok!
+            //if no errors then print WWW Ok!
             print("WWW Ok!: " + www.text);
 
             //check what the online script gives back
@@ -104,10 +106,10 @@ public class AutoUpdator : MonoBehaviour {
 
     private void StartUpdate()
     {
-        //This setts the update to true
+        //This sets the update to true
         update = true;
 
-        //this starts the download of the file
+        //starts the download of the file
         wb.DownloadFileAsync(new Uri(urlUpdate), tempDirectory + "updates" + fileFormat);
 
         //this checks the changes in the download and sends it to the function wb_DownloadProgressChanged
@@ -140,7 +142,7 @@ public class AutoUpdator : MonoBehaviour {
         downloadedPercent = e.ProgressPercentage;
     }
 
-    private void OnGUI()//this repeates 2 times every frame 
+    private void OnGUI()//this repeats 2 times every frame 
     {
         //set the skin to my skin
         GUI.skin = myskin;
