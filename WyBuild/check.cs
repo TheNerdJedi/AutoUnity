@@ -24,31 +24,12 @@ public class check : MonoBehaviour {
 
 
     private void OnGUI() 
-    {
+    { 
     if (showUpdateButton)
         if (GUI.Button(UpdateButton, "Check For Updates"))
         {
             // What happens if Check for Updates is clicked
-            
-            try
-            {
-                Process myProcess = new Process();
-                myProcess.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
-                myProcess.StartInfo.CreateNoWindow = true;
-                myProcess.StartInfo.UseShellExecute = false;
-                myProcess.StartInfo.FileName = "C:\\Windows\\system32\\cmd.exe";
-                string path = "C:\\Users\\Russell\\Desktop\\testFile.bat";
-                myProcess.StartInfo.Arguments = "/c" + path;
-                myProcess.EnableRaisingEvents = true;
-                myProcess.Start();
-                myProcess.WaitForExit();
-                int ExitCode = myProcess.ExitCode;
-                //print(ExitCode);
-            }
-            catch (Exception e)
-            {
-                print(e);
-            }
+            System.Diagnostics.Process.Start("C:\\Users\\Russell\\Desktop\\wyUpdate.exe");
 
 
 
