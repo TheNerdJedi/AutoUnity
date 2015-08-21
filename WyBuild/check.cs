@@ -29,7 +29,7 @@ public class check : MonoBehaviour {
         if (GUI.Button(UpdateButton, "Check For Updates"))
         {
             // What happens if Check for Updates is clicked
-            System.Diagnostics.Process.Start("C:\\Users\\Russell\\Desktop\\wyUpdate.exe");
+            System.Diagnostics.Process.Start("location of file");
 
 
 
