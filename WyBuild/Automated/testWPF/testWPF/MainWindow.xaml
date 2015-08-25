@@ -1,0 +1,23 @@
+<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Controls="clr-namespace:wyDay.Controls;assembly=AutomaticUpdaterWPF" x:Class="testWPF.MainWindow"
+        Title="MainWindow" Height="720" Width="1010">
+    <Grid Background="Green">
+        <WindowsFormsHost x:Name ="windowsFormsHost" Width ="1000" Margin="0,10,2,10" />
+        <Image Source="logo_home.png" VerticalAlignment="Center" HorizontalAlignment="Center" StretchDirection="DownOnly"/>
+
+        <Controls:AutomaticUpdater HorizontalAlignment="Right" Height="Auto" Margin="0,675,-1,-2" Width="1440" DaysBetweenChecks="0"  RenderTransformOrigin="0.5,0.5" UpdateType="CheckAndDownload" >
+            <Controls:AutomaticUpdater.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Controls:AutomaticUpdater.RenderTransform>
+        </Controls:AutomaticUpdater>
+        <Button Content="Launch App" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="191" Height="90" x:Name="button_1" Click="button_1_Click"/>
+
+    </Grid>
+</Window>
