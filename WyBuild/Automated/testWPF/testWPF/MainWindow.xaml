@@ -3,9 +3,9 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:Controls="clr-namespace:wyDay.Controls;assembly=AutomaticUpdaterWPF" x:Class="testWPF.MainWindow"
         Title="MainWindow" Height="720" Width="1010">
-    <Grid Background="Green">
+    <Grid Background="CornflowerBlue">
         <WindowsFormsHost x:Name ="windowsFormsHost" Width ="1000" Margin="0,10,2,10" />
-        <Image Source="logo_home.png" VerticalAlignment="Center" HorizontalAlignment="Center" StretchDirection="DownOnly"/>
+        <Image Source="logo_home.png" VerticalAlignment="Center" HorizontalAlignment="Center" StretchDirection="DownOnly" Margin="351,199,351,340"/>
 
         <Controls:AutomaticUpdater HorizontalAlignment="Right" Height="Auto" Margin="0,675,-1,-2" Width="1440" DaysBetweenChecks="0"  RenderTransformOrigin="0.5,0.5" UpdateType="CheckAndDownload" >
             <Controls:AutomaticUpdater.RenderTransform>
@@ -17,7 +17,6 @@
                 </TransformGroup>
             </Controls:AutomaticUpdater.RenderTransform>
         </Controls:AutomaticUpdater>
-        <Button Content="Launch App" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="191" Height="90" x:Name="button_1" Click="button_1_Click"/>
-
+        <Button Content="Launch" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="190" Height="90" x:Name="button_1" Click="button_1_Click" Margin="406,0,406,148" FontSize="30"/>
     </Grid>
 </Window>

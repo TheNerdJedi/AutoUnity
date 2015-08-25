@@ -114,6 +114,7 @@ namespace testWPF // we can change this to InsiteVR later
         void OnUpdateSuccessful(object sender, SuccessArgs e)
         {
             Console.WriteLine("success");
+
         }
 
         void OnFailed(object sender, FailArgs e) //OnUpdateFailed
@@ -154,9 +155,12 @@ namespace testWPF // we can change this to InsiteVR later
                 App.Current.MainWindow = main;
                 main.Show();
                 this.Close();
-                
             });
+            
         }
+
+       
+       
 
         private void button_1_Click(object sender, RoutedEventArgs e)
         {
@@ -173,14 +177,8 @@ namespace testWPF // we can change this to InsiteVR later
             
         }
 
-        // closing was aborted and then re-run this file 
-        
-        private void AutomaticUpdater_ClosingAborted(object sender, EventArgs e)
-        {
-            InitializeComponent();
-        }
-
-    }  
+        // closing was aborted and then re-run this file     
+    }
 }
 
 
